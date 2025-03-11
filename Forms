@@ -37,19 +37,7 @@ namespace ProcesadorDeTarjetas
 
         private async void btn_iniciar_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("¿Cuantas tarjetas desea procesar?");
-            string cantidadtarjetas = Console.ReadLine();
-            int cantidadsolicitada;
-            
-            if (int.TryParse(cantidadtarjetas, out cantidadsolicitada))
-            {
-                Console.WriteLine($"Procesando {cantidadsolicitada} tarjetas");
-            }
-            else
-            {
-                Console.WriteLine("Error. Ingrese un número");
-            }
-
+           
                 var tarjetas = ObtenerTarjetasDeCredito(15);
             //Iniciamos cronómetro
             var stopwatch = new Stopwatch();
